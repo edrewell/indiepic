@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/listing-list-styles.css' %}">{% endblock %}
+{% block title %}<title>Listings</title>{% endblock %}
+{% block content %}
+    <h1 class="display-4">Listings</h1>
+    <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8 listings-col">
+        {% for listing in listing_list %}
+            <a href="{{ listing.get_absolute_url }}">
+                <div class="container listing-item">
+                    <h2>{{ listing.vehicle }}</h2>
+                    <img src="{{ listing.listingimage_set.first }}">
+                    <h4>{{ listing.user.username }}</h4>
+                </div>
+            </a>
+
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

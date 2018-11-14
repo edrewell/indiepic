@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <h1>{{ listing.vehicle }}</h1>
+    <h3>{{ listing.colour }}</h3>
+    <p>{{ listing.description }}</p>
+    {% for image in listing.listingimage_set.all %}
+        <img src="{{ image.url }}">
+        <p>{{ image.ret_str }}</p>
+    {% endfor %}
+{% endblock %}

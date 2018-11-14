@@ -1,0 +1,11 @@
+.title-jt {
+    background:
+            linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
+            ),
+            url("/static/img/asphalt-car-clear-sky-192364.jpg") no-repeat center;
+    background-size: 100%;
+    color: azure;
+    margin-top: 40px;
+}
